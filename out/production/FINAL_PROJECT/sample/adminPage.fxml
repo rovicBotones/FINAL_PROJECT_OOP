@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminPageController">
+   <children>
+      <AnchorPane prefHeight="90.0" prefWidth="800.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label layoutX="41.0" layoutY="19.0" prefHeight="43.0" prefWidth="307.0" text="Build Gym - Admin" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="89.0" prefHeight="518.0" prefWidth="800.0" style="-fx-background-color: #2C394B;">
+         <children>
+            <TableView fx:id="memberListTableview" layoutX="23.0" layoutY="74.0" prefHeight="400.0" prefWidth="750.0">
+              <columns>
+                <TableColumn fx:id="idTableColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameTableColumn" prefWidth="280.0" text="Name" />
+                  <TableColumn fx:id="genderTableColumn" prefWidth="100.0" text="Gender" />
+                  <TableColumn fx:id="weightTableColumn" prefWidth="100.0" text="Weight(kg)" />
+                  <TableColumn fx:id="heightTableColumn" prefWidth="100.0" text="Height(cm)" />
+                  <TableColumn fx:id="bmiTableColumn" prefWidth="93.3333740234375" text="BMI" />
+              </columns>
+            </TableView>
+            <Button fx:id="signOutButton" layoutX="690.0" layoutY="30.0" mnemonicParsing="false" onAction="#adminSignOutButtonOnAction" prefHeight="25.0" prefWidth="82.0" text="SgnOut" />
+            <Button fx:id="createMemberAccount" layoutX="584.0" layoutY="29.0" mnemonicParsing="false" onAction="#createMemberAccountOnAction" prefHeight="25.0" prefWidth="91.0" text="Add Member" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
